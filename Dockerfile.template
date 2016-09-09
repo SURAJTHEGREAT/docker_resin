@@ -1,0 +1,2 @@
+FROM resin/nuc-debian
+RUN docker pull surajthegreat/iotivity_ubuntu_final
