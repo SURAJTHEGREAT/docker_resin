@@ -2,9 +2,10 @@
 # use RESIN compatible Docker base image with Node.js
 FROM resin/nuc-node:latest
 ENV INITSYSTEM on
+COPY install.sh /
+RUN sh /install.sh 
 
-RUN sudo apt-get install python-pip
-RUN sudo pip install docker-compose
+
 # make the src folder available in the docker image
 ADD src/ /src
 WORKDIR /src
