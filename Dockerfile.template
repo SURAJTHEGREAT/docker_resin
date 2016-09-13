@@ -3,7 +3,7 @@
 FROM resin/nuc-node:latest
 ENV INITSYSTEM on
 
-RUN sudo apt-get -y install python-pip
+RUN sudo apt-get install python-pip
 RUN sudo pip install docker-compose
 # make the src folder available in the docker image
 ADD src/ /src
