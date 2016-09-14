@@ -2,6 +2,8 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-python
 # Enable systemd
 ENV INITSYSTEM on
+#COPY APP
+COPY app/ /usr/code
 #Install Docker on nuc
 RUN apt-get -y update && apt-get install -y apt-transport-https ca-certificates
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
